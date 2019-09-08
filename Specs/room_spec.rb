@@ -27,12 +27,12 @@ class TestRoom< MiniTest::Test
      assert_equal(["rock and roll", "vinara vinara"],@room1.title_of_songs())
     end
 
-  # def test_reduce_capacity()
-  #   assert_equal(1 , @room1.reduce_capacity())
+  # def test_reduce_space_availability()
+  #   assert_equal(1 , @room1.reduce_space_availability())
   # end
   # def test_add_guest_to_room()
   #   assert_equal(1 ,@room1.guest_checkin(@guest1))
   #    assert_equal(50 , @room1.revenue())
-  #      assert_equal(1 , @room1.capacity)
+  #      assert_equal(1 , @room1.space_availability)
   # end
 end

@@ -31,7 +31,17 @@ end
     return @bar_revenue
   end
 
+def check_in(guest)
+  for room in @rooms
+    if guest.first_intrest_in == room.type()
+      return checkin_process(guest , room)
+  elsif guest.second_intrest_in == room.type()
+    return checkin_process(guest , room)
 
+  else "All rooms are filled "
+  end
+end
+end
 
   # if room in bar palys the guest fav_song
   def if_guest_fav_song_played(room)
@@ -42,4 +52,26 @@ end
       return "whoo!"
     end
   end
+  def checkin_process(guest , room)
+    if guest.wallet() >= room.entry_fee  &&  room.spaces_available !=0
+      check_in = true
+      room.guests << guest
+      room.reduce_space_availability()
+      room.add_revenue(room.entry_fee)
+    end
+    return room.guests.length()
+  end
+
+  # add_revenue(@entry_fee)
+  def check_out(guest)
+    for room in @rooms
+      checkout_process(guest,room)
+    end
+  end
+  def checkout_process(guest,room)
+    room.guests.delete(guest)
+    room.revenue
+    check_out = true
+  end
+  # def total_rooms_available_
 end

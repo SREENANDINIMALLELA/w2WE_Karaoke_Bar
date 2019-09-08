@@ -1,10 +1,11 @@
 class Guest
-  attr_reader :name , :wallet,:fav_song , :room_type
-  def initialize( name  , wallet , fav_song, room_type)
+  attr_reader :name , :wallet,:fav_song , :first_intrest_in,:second_intrest_in
+  def initialize( name  , wallet , fav_song, first_intrest_in,second_intrest_in)
     @name = name
     @wallet = wallet
     @fav_song=fav_song
-    @room_type=room_type
+    @first_intrest_in=first_intrest_in
+    @second_intrest_in= second_intrest_in
   end
 
   # def check_in(rooms)
