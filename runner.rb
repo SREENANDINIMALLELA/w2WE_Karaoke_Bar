@@ -18,13 +18,25 @@ if user_input == "Admin"
   puts "2 for Songs Management "
   puts "3 for Rooms Management "
   admin_action = gets.chomp()
+  guest = Guest.new(name,cash,first_intrest_in,second_intrest_in)
   if admin_action == 1
     puts "1 for Check-in guest"
     puts "2 for check-out guest"
       user = gets.chomp()
        if user == 1
-
          puts "Please enter guest name1"
+          name = gets.chomp()
+         puts "Please enter the cash you have to pay entree fee "
+         cash = gets.chomp()
+         puts " Enter 1 for Melody music "
+         puts " Enter 2 for Romantic music "
+         puts " Enter 3 for rocking rock lovers "
+
+         puts "Enter the first intrest room "
+          first_intrest_in= gets.chomp
+
+         puts "Enter second intrested room"
+         second_intrest_in=gets.chomp
 
 
 
